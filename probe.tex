@@ -1,0 +1,85 @@
+\documentclass[a0, portrait]{a0poster}
+%%%Load packages
+\usepackage{multicol} 			%3-column layout
+\usepackage[left=1.5cm,right=1.5cm,bottom=0cm,top=0cm]{geometry}			%Reset margins
+%\usepackage{fontspec} % For loading fonts
+%\setmainfont[SmallCapsFont = Fontin SmallCaps, Ligatures=TeX]{Fontin} % Main document font
+\usepackage[scaled=1]{helvet}
+\usepackage[x11names]{xcolor}				%Needed for colour boxes & coloured text
+\usepackage{graphicx}%%%Define colours and lengths
+\usepackage[export]{adjustbox}
+\usepackage{authblk}
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+\usepackage{bbm} %mathbbm
+\usepackage{anyfontsize}
+\usepackage{array, booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tcolorbox}
+\usepackage{mathtools}
+\usepackage[hidelinks, linktoc=all, russian]{hyperref}
+\usepackage{cleveref}
+\usepackage{capt-of}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\captionsetup[subfigure]{labelformat=parens}
+
+\definecolor{headingcol}{rgb}{0.4, 0.57, 0.83}			%Colour of main title
+\definecolor{titlecol2}{HTML}{CC181E}			%Colour of main title
+
+\definecolor{titlecol}{rgb}{0.3, 0.47, 0.73}			%Colour of main title
+\definecolor{boxcol}{rgb}{0.7,0.2,0.2}		%Edge-colour of box and top banner
+\fboxsep=1cm							%Padding between box and text
+\setlength{\columnsep}{2cm}				%Set spacing between columns
+\renewcommand{\familydefault}{\sfdefault}	%Set main text to sans-serif
+
+
+\newenvironment{frshaded}{%
+\def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{framecolor}{shadecolor}}%
+\MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+\renewcommand{\figureautorefname}{Fig.}%
+\renewcommand{\figurename}{Fig.}
+
+\graphicspath{{Pictures/}}
+
+\newcommand{\diff}{\,\mathrm{d}} 	
+ \renewcommand{\figureautorefname}{Fig.}%
+\renewcommand*\thesection{\arabic{section}}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+\newcommand{\rbrkt}[1]{\left( #1 \right)}
+\newcommand{\sbrkt}[1]{\left[ #1 \right]}
+
+\begin{document}
+	
+	
+		\begin{table}
+		
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			№/№ & $C_{q1}$ & $C_{q2}$ & $C_{q3}$ & $C_{q4}$ & $C_{q5}$ & $C_{ground}$ \\
+			\hline
+			$C_{q1}$ & 204.32 & -1.6719 & -0.01648 & -0.0023559 & -0.00041832 & -202.63  \\
+			\hline
+			$C_{q2}$ & -1.6719 & 184.42 & -1.5558 & -0.015993 & -0.0023771 & -181.18\\ 
+			\hline
+			$C_{q3}$  & -0.01648 & -1.5558 & 208.25 & -1.4411 & -0.016563 & -205.22\\
+			\hline
+			$C_{q4}$  & -0.0023559 & -0.015993 & -1.4411 & 196.76 & -1.1688 & -194.13\\
+			\hline
+			$C_{q5}$  & -0.00041832 & -0.0023771 & -0.016563 & -1.1688 & 209.54 & -208.36\\
+			\hline
+			$C_{ground}$  & -202.63 & -181.18 & -205.22 & -194.13 & -208.36 & 991.51\\
+			\hline
+		\end{tabular}
+		\caption{Полученная матрица емкости в фФ.}
+		\label{table:cap_matrix}
+	\end{table}
+
+
+
+\end{document}
